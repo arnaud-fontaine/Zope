@@ -661,7 +661,7 @@ class File(
         file = REQUEST['BODYFILE']
 
         data, size = self._read_data(file)
-        if isinstance(data, str):
+        if isinstance(data, text_type):
             data = data.encode('UTF-8')
         content_type = self._get_content_type(file, data, self.__name__,
                                               type or self.content_type)
